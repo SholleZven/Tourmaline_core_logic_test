@@ -90,7 +90,25 @@ let bowling = function (scoreString) {
         return -1;
       }
       score = score + frameScore + f2Score;
+      if (frame == 10) {
+        if (scorePlus) {
+          let p1 = scoreString[i + 1];
+          i++;
+          if (p1 == "X") {
+            score = score + 10;
+          } else if (p1.match(/^[1-9]$/) || p1 == "-") {
+            score = score + parseInt(p1) || 0;
+          } else {
+            return -1;
+          }
+        } else {
+          if (scoreString.length > i + 1) return -1;
+        }
+      }
+      frame = frame + 1;
+    } else {
+      return -1;
     }
   }
   return score;
-}
+};
