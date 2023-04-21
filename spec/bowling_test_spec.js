@@ -1,3 +1,5 @@
+let script = require("../src/bowling");
+
 describe("Bowling", function () {
   describe("Invalid", function () {
     describe("Invalid length", function () {
@@ -59,6 +61,6 @@ describe("Bowling", function () {
 
 function bowling_helper(expression, result) {
   it("should evaluate '" + expression + "' to " + result, function () {
-    expect(bowling(expression)).toBe(result);
+    expect(script.bowling(expression)).toBe(result);
   });
 }
