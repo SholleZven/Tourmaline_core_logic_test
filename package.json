@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "jasmine": "^4.6.0"
+  },
+  "scripts": {
+    "test": "jasmine"
+  }
+}
